@@ -23,8 +23,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Menu" id="IRo-JA-i0D"/>
+                    <connections>
+                        <outlet property="viewModel" destination="Gr6-JC-v1j" id="zrR-od-cvd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fk-AA-AKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Gr6-JC-v1j" customClass="StartMenuViewModel" customModule="PhotoChallenge" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="788" y="65"/>
         </scene>
