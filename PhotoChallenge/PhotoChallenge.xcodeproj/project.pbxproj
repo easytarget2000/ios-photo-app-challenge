@@ -16,6 +16,7 @@
 		0B02174622F3546B00EB6D15 /* StartMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02174522F3546B00EB6D15 /* StartMenuTableViewController.swift */; };
 		0B02174822F3547400EB6D15 /* StartMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02174722F3547400EB6D15 /* StartMenuViewModel.swift */; };
 		0B02174B22F3557300EB6D15 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0B02174A22F3557300EB6D15 /* Localizable.strings */; };
+		0B02174D22F357E200EB6D15 /* StartMenuAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02174C22F357E200EB6D15 /* StartMenuAction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		0B02174522F3546B00EB6D15 /* StartMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuTableViewController.swift; sourceTree = "<group>"; };
 		0B02174722F3547400EB6D15 /* StartMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewModel.swift; sourceTree = "<group>"; };
 		0B02174A22F3557300EB6D15 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		0B02174C22F357E200EB6D15 /* StartMenuAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuAction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		0B02174122F353FA00EB6D15 /* StartMenu */ = {
 			isa = PBXGroup;
 			children = (
+				0B02174C22F357E200EB6D15 /* StartMenuAction.swift */,
 				0B02174522F3546B00EB6D15 /* StartMenuTableViewController.swift */,
 				0B02174722F3547400EB6D15 /* StartMenuViewModel.swift */,
 			);
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B02174822F3547400EB6D15 /* StartMenuViewModel.swift in Sources */,
+				0B02174D22F357E200EB6D15 /* StartMenuAction.swift in Sources */,
 				0B02171222F3535200EB6D15 /* AppDelegate.swift in Sources */,
 				0B02174622F3546B00EB6D15 /* StartMenuTableViewController.swift in Sources */,
 			);

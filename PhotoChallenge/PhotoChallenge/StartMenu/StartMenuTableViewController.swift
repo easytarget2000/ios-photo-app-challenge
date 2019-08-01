@@ -1,14 +1,8 @@
-//
-//  StartMenuTableViewController.swift
-//  PhotoChallenge
-//
-//  Created by Michel Sievers on 01.08.19.
-//  Copyright © 2019 Easy Target. All rights reserved.
-//
-
 import UIKit
 
 class StartMenuTableViewController: UITableViewController {
+    
+    @IBOutlet weak var viewModel: StartMenuViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
