@@ -2,12 +2,11 @@ import UIKit.UIImage
 
 class PhotoCaptureViewModel: NSObject {
     
-    @IBOutlet weak var imageProvider: PhotoCaptureImageProvider!
-    
-    fileprivate(set) var image: UIImage?
+    @IBOutlet weak var imageProvider: PhotoCaptureImageUIProvider!
+    fileprivate(set) var photo: Photo?
     
     func captureImageIfNeeded() {
-        guard image == nil else {
+        guard photo == nil else {
             return
         }
         
