@@ -13,6 +13,8 @@
 		0B02171C22F3535300EB6D15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B02171A22F3535300EB6D15 /* LaunchScreen.storyboard */; };
 		0B02172722F3535300EB6D15 /* PhotoChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02172622F3535300EB6D15 /* PhotoChallengeTests.swift */; };
 		0B02173222F3535300EB6D15 /* PhotoChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02173122F3535300EB6D15 /* PhotoChallengeUITests.swift */; };
+		0B02174622F3546B00EB6D15 /* StartMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02174522F3546B00EB6D15 /* StartMenuTableViewController.swift */; };
+		0B02174822F3547400EB6D15 /* StartMenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02174722F3547400EB6D15 /* StartMenuViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,8 @@
 		0B02172D22F3535300EB6D15 /* PhotoChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B02173122F3535300EB6D15 /* PhotoChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoChallengeUITests.swift; sourceTree = "<group>"; };
 		0B02173322F3535300EB6D15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B02174522F3546B00EB6D15 /* StartMenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuTableViewController.swift; sourceTree = "<group>"; };
+		0B02174722F3547400EB6D15 /* StartMenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +144,8 @@
 		0B02174122F353FA00EB6D15 /* StartMenu */ = {
 			isa = PBXGroup;
 			children = (
+				0B02174522F3546B00EB6D15 /* StartMenuTableViewController.swift */,
+				0B02174722F3547400EB6D15 /* StartMenuViewModel.swift */,
 			);
 			path = StartMenu;
 			sourceTree = "<group>";
@@ -301,7 +307,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B02174822F3547400EB6D15 /* StartMenuViewModel.swift in Sources */,
 				0B02171222F3535200EB6D15 /* AppDelegate.swift in Sources */,
+				0B02174622F3546B00EB6D15 /* StartMenuTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
