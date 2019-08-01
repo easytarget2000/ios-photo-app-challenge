@@ -95,9 +95,9 @@
 		0B02171022F3535200EB6D15 /* PhotoChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				0B02174222F3540B00EB6D15 /* Common */,
 				0B02171D22F3535300EB6D15 /* Info.plist */,
 				0B02171122F3535200EB6D15 /* AppDelegate.swift */,
+				0B02174222F3540B00EB6D15 /* Common */,
 				0B02173F22F353DE00EB6D15 /* PhotoCapture */,
 				0B02174022F353EA00EB6D15 /* PhotoGallery */,
 				0B02174122F353FA00EB6D15 /* StartMenu */,
