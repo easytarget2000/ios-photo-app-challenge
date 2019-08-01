@@ -20,6 +20,8 @@
 		0B02174F22F35AA100EB6D15 /* StartMenuActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02174E22F35AA100EB6D15 /* StartMenuActionDelegate.swift */; };
 		0B02175122F3949300EB6D15 /* PhotoCaptureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02175022F3949300EB6D15 /* PhotoCaptureTableViewController.swift */; };
 		0B02175322F394A000EB6D15 /* PhotoCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02175222F394A000EB6D15 /* PhotoCaptureViewModel.swift */; };
+		0B02175522F395F700EB6D15 /* PhotoCaptureImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02175422F395F700EB6D15 /* PhotoCaptureImageProvider.swift */; };
+		0B02175722F397C800EB6D15 /* PhotoCaptureImageProviderCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02175622F397C800EB6D15 /* PhotoCaptureImageProviderCallback.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		0B02174E22F35AA100EB6D15 /* StartMenuActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuActionDelegate.swift; sourceTree = "<group>"; };
 		0B02175022F3949300EB6D15 /* PhotoCaptureTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureTableViewController.swift; sourceTree = "<group>"; };
 		0B02175222F394A000EB6D15 /* PhotoCaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureViewModel.swift; sourceTree = "<group>"; };
+		0B02175422F395F700EB6D15 /* PhotoCaptureImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureImageProvider.swift; sourceTree = "<group>"; };
+		0B02175622F397C800EB6D15 /* PhotoCaptureImageProviderCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureImageProviderCallback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +146,8 @@
 			children = (
 				0B02175022F3949300EB6D15 /* PhotoCaptureTableViewController.swift */,
 				0B02175222F394A000EB6D15 /* PhotoCaptureViewModel.swift */,
+				0B02175422F395F700EB6D15 /* PhotoCaptureImageProvider.swift */,
+				0B02175622F397C800EB6D15 /* PhotoCaptureImageProviderCallback.swift */,
 			);
 			path = PhotoCapture;
 			sourceTree = "<group>";
@@ -337,6 +343,8 @@
 				0B02174D22F357E200EB6D15 /* StartMenuAction.swift in Sources */,
 				0B02171222F3535200EB6D15 /* AppDelegate.swift in Sources */,
 				0B02174622F3546B00EB6D15 /* StartMenuTableViewController.swift in Sources */,
+				0B02175722F397C800EB6D15 /* PhotoCaptureImageProviderCallback.swift in Sources */,
+				0B02175522F395F700EB6D15 /* PhotoCaptureImageProvider.swift in Sources */,
 				0B02175122F3949300EB6D15 /* PhotoCaptureTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
