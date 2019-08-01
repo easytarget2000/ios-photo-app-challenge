@@ -52,7 +52,7 @@ extension StartMenuTableViewController {
         )
         let section = indexPath.section
         let index = indexPath.row
-        cell.textLabel = titleForActionInSection(section, atIndex: index)
+        cell.textLabel?.text = titleForActionInSection(section, atIndex: index)
         return cell
     }
 }
@@ -68,7 +68,7 @@ extension StartMenuTableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
         let section = indexPath.section
         let index = indexPath.row
-        performActionAtSection(section, index: index)
+        performActionInSection(section, atIndex: index)
     }
 
 }
@@ -98,15 +98,18 @@ extension StartMenuTableViewController {
         return viewModel.numOfButtonsInSection(section)
     }
     
-    fileprivate func performActionAtSection(_ section: Int, index: Int) {
-        viewModel.performActionAtSection(section, index: index)
+    fileprivate func performActionInSection(
+        _ section: Int,
+        atIndex index: Int
+    ) {
+        viewModel.performActionInSection(section, atIndex: index)
     }
     
-    fileprivate func titleForActionInSectionn(
+    fileprivate func titleForActionInSection(
         _ section: Int,
-        index: Int
+        atIndex index: Int
     ) -> String {
-        return ""
+        return viewModel.titleForActionInSection(section, atIndex: index)
     }
     
     fileprivate func showCaptureViewController() {
