@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="788" y="65"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Photo Capture Table View Controller-->
         <scene sceneID="mgE-ew-eFz">
             <objects>
-                <tableViewController id="aah-SM-WkR" sceneMemberID="viewController">
+                <tableViewController id="aah-SM-WkR" customClass="PhotoCaptureTableViewController" customModule="PhotoChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iYv-ku-xEC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,8 +75,12 @@
                             <outlet property="delegate" destination="aah-SM-WkR" id="zLN-xI-vGQ"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="viewModel" destination="aea-NU-X3c" id="Jse-Jm-ojM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcd-jK-9CI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="aea-NU-X3c" customClass="PhotoCaptureViewModel" customModule="PhotoChallenge" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1672" y="-282"/>
         </scene>
