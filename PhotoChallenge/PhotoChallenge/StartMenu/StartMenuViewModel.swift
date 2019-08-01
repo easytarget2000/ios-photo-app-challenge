@@ -27,7 +27,14 @@ class StartMenuViewModel: NSObject {
         }
     }
     
-    func performActionAtSection(_ section: Int, index: Int) {
+    func titleForActionInSection(
+        _ section: Int,
+        atIndex index: Int
+    ) -> String {
+        return titleForAction(actions[index])
+    }
+    
+    func performActionInSection(_ section: Int, atIndex index: Int) {
         switch actions[index] {
         case .openCapture:
             actionDelegate?.openCaptureActionTriggered()
