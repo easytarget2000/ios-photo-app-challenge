@@ -1,3 +1,1 @@
-import UIKit.UIImage
-
-typealias PhotoCaptureImageProviderCallback = (UIImage) -> ()
+typealias PhotoCaptureImageProviderCallback = (Photo) -> ()

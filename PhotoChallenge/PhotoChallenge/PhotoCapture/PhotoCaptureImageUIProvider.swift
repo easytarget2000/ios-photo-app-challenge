@@ -1,6 +1,6 @@
-import UIKit
+import UIKit.UIImagePickerController
 
-class PhotoCaptureImageProvider: NSObject {
+class PhotoCaptureImageUIProvider: NSObject {
     
     var imagePickerController = UIImagePickerController()
     var callback: PhotoCaptureImageProviderCallback?
@@ -19,7 +19,7 @@ class PhotoCaptureImageProvider: NSObject {
 
 // MARK: - UIImagePickerControllerDelegate
 
-extension PhotoCaptureImageProvider:
+extension PhotoCaptureImageUIProvider:
 UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
     
@@ -45,7 +45,7 @@ UINavigationControllerDelegate {
 
 // MARK: - Implementations
 
-extension PhotoCaptureImageProvider {
+extension PhotoCaptureImageUIProvider {
     
     fileprivate func handleImageSelection(image: UIImage) {
         callback?(image)
