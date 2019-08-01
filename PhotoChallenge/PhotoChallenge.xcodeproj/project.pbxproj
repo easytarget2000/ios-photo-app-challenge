@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0B02171222F3535200EB6D15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02171122F3535200EB6D15 /* AppDelegate.swift */; };
-		0B02171422F3535200EB6D15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02171322F3535200EB6D15 /* ViewController.swift */; };
 		0B02171722F3535200EB6D15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B02171522F3535200EB6D15 /* Main.storyboard */; };
 		0B02171922F3535300EB6D15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B02171822F3535300EB6D15 /* Assets.xcassets */; };
 		0B02171C22F3535300EB6D15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B02171A22F3535300EB6D15 /* LaunchScreen.storyboard */; };
@@ -36,7 +35,6 @@
 /* Begin PBXFileReference section */
 		0B02170E22F3535200EB6D15 /* PhotoChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B02171122F3535200EB6D15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0B02171322F3535200EB6D15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0B02171622F3535200EB6D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B02171822F3535300EB6D15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B02171B22F3535300EB6D15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,12 +95,12 @@
 		0B02171022F3535200EB6D15 /* PhotoChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				0B02171122F3535200EB6D15 /* AppDelegate.swift */,
-				0B02171322F3535200EB6D15 /* ViewController.swift */,
-				0B02171522F3535200EB6D15 /* Main.storyboard */,
-				0B02171822F3535300EB6D15 /* Assets.xcassets */,
-				0B02171A22F3535300EB6D15 /* LaunchScreen.storyboard */,
+				0B02174222F3540B00EB6D15 /* Common */,
 				0B02171D22F3535300EB6D15 /* Info.plist */,
+				0B02171122F3535200EB6D15 /* AppDelegate.swift */,
+				0B02173F22F353DE00EB6D15 /* PhotoCapture */,
+				0B02174022F353EA00EB6D15 /* PhotoGallery */,
+				0B02174122F353FA00EB6D15 /* StartMenu */,
 			);
 			path = PhotoChallenge;
 			sourceTree = "<group>";
@@ -123,6 +121,53 @@
 				0B02173322F3535300EB6D15 /* Info.plist */,
 			);
 			path = PhotoChallengeUITests;
+			sourceTree = "<group>";
+		};
+		0B02173F22F353DE00EB6D15 /* PhotoCapture */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoCapture;
+			sourceTree = "<group>";
+		};
+		0B02174022F353EA00EB6D15 /* PhotoGallery */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoGallery;
+			sourceTree = "<group>";
+		};
+		0B02174122F353FA00EB6D15 /* StartMenu */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = StartMenu;
+			sourceTree = "<group>";
+		};
+		0B02174222F3540B00EB6D15 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				0B02174422F3543600EB6D15 /* Assets */,
+				0B02174322F3542500EB6D15 /* Storyboards */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		0B02174322F3542500EB6D15 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0B02171A22F3535300EB6D15 /* LaunchScreen.storyboard */,
+				0B02171522F3535200EB6D15 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		0B02174422F3543600EB6D15 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0B02171822F3535300EB6D15 /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +301,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B02171422F3535200EB6D15 /* ViewController.swift in Sources */,
 				0B02171222F3535200EB6D15 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
