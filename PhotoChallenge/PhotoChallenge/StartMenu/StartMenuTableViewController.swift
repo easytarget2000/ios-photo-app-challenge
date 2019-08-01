@@ -4,6 +4,7 @@ class StartMenuTableViewController: UITableViewController {
     
     // MARK: - Values
     
+    static let actionCellIdentifier = "StartMenuActionCell"
     @IBOutlet weak var viewModel: StartMenuViewModel!
     
     fileprivate var numOfSections: Int {
@@ -40,6 +41,19 @@ extension StartMenuTableViewController {
         return numOfButtonsInSection(section)
     }
     
+    override func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: StartMenuTableViewController.actionCellIdentifier,
+            for: indexPath
+        )
+        let section = indexPath.section
+        let index = indexPath.row
+        cell.textLabel = titleForActionInSection(section, atIndex: index)
+        return cell
+    }
 }
 
 // MARK: - UITableViewDelegate
@@ -85,6 +99,13 @@ extension StartMenuTableViewController {
     
     fileprivate func performActionAtSection(_ section: Int, index: Int) {
         viewModel.performActionAtSection(section, index: index)
+    }
+    
+    fileprivate func titleForActionInSectionn(
+        _ section: Int,
+        index: Int
+    ) -> String {
+        return ""
     }
     
     fileprivate func showCaptureViewController() {
