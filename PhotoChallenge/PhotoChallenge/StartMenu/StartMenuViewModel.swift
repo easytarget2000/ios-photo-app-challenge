@@ -11,6 +11,12 @@ class StartMenuViewModel: NSObject {
         comment: "View Photos"
     )
     let actions: [StartMenuAction] = [.openCapture, .openGallery]
+    let numOfButtonSections = 1
+    weak var actionDelegate: StartMenuActionDelegate?
+    
+    func numOfButtonsInSection(_ section: Int) -> Int {
+        return actions.count
+    }
     
     func titleForAction(_ action: StartMenuAction) -> String{
         switch action {
@@ -21,12 +27,12 @@ class StartMenuViewModel: NSObject {
         }
     }
     
-    func performActionAtIndex(_ index: Int) {
+    func performActionAtSection(_ section: Int, index: Int) {
         switch actions[index] {
         case .openCapture:
-            break
+            actionDelegate?.openCaptureActionTriggered()
         case .openGallery:
-            break
+            actionDelegate?.openGalleryActionTriggered()
         }
     }
 }

@@ -2,83 +2,96 @@ import UIKit
 
 class StartMenuTableViewController: UITableViewController {
     
+    // MARK: - Values
+    
     @IBOutlet weak var viewModel: StartMenuViewModel!
+    
+    fileprivate var numOfSections: Int {
+        get {
+            return viewModel.numOfButtonSections
+        }
+    }
+    
+}
+
+// MARK: - UIViewController Life Cycle
+
+extension StartMenuTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        configureViewModel()
     }
+    
+}
 
-    // MARK: - Table view data source
+// MARK: - UITableViewDataSource
+
+extension StartMenuTableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return numOfSections
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    override func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        return numOfButtonsInSection(section)
+    }
+    
+}
+
+// MARK: - UITableViewDelegate
+
+extension StartMenuTableViewController {
+
+    override func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let section = indexPath.section
+        let index = indexPath.row
+        performActionAtSection(section, index: index)
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+}
 
-        // Configure the cell...
+// MARK: - StartMenuActionDelegate
 
-        return cell
+extension StartMenuTableViewController: StartMenuActionDelegate {
+    
+    func openCaptureActionTriggered() {
+        showCaptureViewController()
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    func openGalleryActionTriggered() {
+        showGalleryViewController()
     }
-    */
+}
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+// MARK: - Implementations
+
+extension StartMenuTableViewController {
+    
+    fileprivate func configureViewModel() {
+        viewModel.actionDelegate = self
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
+    
+    fileprivate func numOfButtonsInSection(_ section: Int) -> Int {
+        return viewModel.numOfButtonsInSection(section)
     }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
+    
+    fileprivate func performActionAtSection(_ section: Int, index: Int) {
+        viewModel.performActionAtSection(section, index: index)
     }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    fileprivate func showCaptureViewController() {
+        
     }
-    */
-
+    
+    fileprivate func showGalleryViewController() {
+        
+    }
 }
