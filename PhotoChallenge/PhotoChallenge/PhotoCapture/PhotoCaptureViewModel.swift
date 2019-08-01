@@ -10,6 +10,8 @@ class PhotoCaptureViewModel: NSObject {
             return
         }
         
-        
+        imageProvider.capturePhoto { (photo) in
+            self.photo = photo
+        }
     }
 }
