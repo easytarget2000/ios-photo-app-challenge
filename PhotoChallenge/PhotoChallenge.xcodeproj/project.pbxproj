@@ -175,10 +175,10 @@
 		0B02174222F3540B00EB6D15 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				0B02175822F399F800EB6D15 /* Photo.swift */,
 				0B02174422F3543600EB6D15 /* Assets */,
 				0B02174322F3542500EB6D15 /* Storyboards */,
 				0B02174922F3556400EB6D15 /* Strings */,
-				0B02175822F399F800EB6D15 /* Photo.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
