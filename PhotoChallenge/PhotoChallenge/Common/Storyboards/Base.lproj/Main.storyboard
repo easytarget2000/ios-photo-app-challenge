@@ -80,7 +80,12 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bcd-jK-9CI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="aea-NU-X3c" customClass="PhotoCaptureViewModel" customModule="PhotoChallenge" customModuleProvider="target"/>
+                <customObject id="aea-NU-X3c" customClass="PhotoCaptureViewModel" customModule="PhotoChallenge" customModuleProvider="target">
+                    <connections>
+                        <outlet property="imageProvider" destination="UpG-bo-aZR" id="mDg-8w-U6f"/>
+                    </connections>
+                </customObject>
+                <customObject id="UpG-bo-aZR" customClass="PhotoCaptureImageProvider" customModule="PhotoChallenge" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1672" y="-282"/>
         </scene>
