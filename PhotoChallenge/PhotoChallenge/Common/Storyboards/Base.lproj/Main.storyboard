@@ -85,7 +85,7 @@
                         <outlet property="imageProvider" destination="UpG-bo-aZR" id="mDg-8w-U6f"/>
                     </connections>
                 </customObject>
-                <customObject id="UpG-bo-aZR" customClass="PhotoCaptureImageProvider" customModule="PhotoChallenge" customModuleProvider="target"/>
+                <customObject id="UpG-bo-aZR" customClass="PhotoCaptureImageUIProvider" customModule="PhotoChallenge" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1672" y="-282"/>
         </scene>
