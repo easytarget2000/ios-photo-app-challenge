@@ -5,7 +5,10 @@ class PhotoCaptureImageUIProvider: NSObject {
     var imagePickerController = UIImagePickerController()
     var callback: PhotoCaptureImageProviderCallback?
     
-    func capturePhoto(callback: @escaping PhotoCaptureImageProviderCallback) {
+    func capturePhoto(
+        sourceViewController: UIViewController,
+        callback: @escaping PhotoCaptureImageProviderCallback
+    ) {
         self.callback = callback
         guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
             handleNoImageSelection()
@@ -13,6 +16,12 @@ class PhotoCaptureImageUIProvider: NSObject {
         }
         
         imagePickerController.delegate = self
+        imagePickerController.sourceType = .camera
+        sourceViewController.present(
+            imagePickerController,
+            animated: true,
+            completion: nil
+        )
     }
     
 }
