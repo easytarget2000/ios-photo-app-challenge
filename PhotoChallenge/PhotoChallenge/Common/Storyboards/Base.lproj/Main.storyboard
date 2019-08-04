@@ -51,10 +51,10 @@
             </objects>
             <point key="canvasLocation" x="788" y="65"/>
         </scene>
-        <!--Photo Capture Table View Controller-->
+        <!--Take Photo-->
         <scene sceneID="mgE-ew-eFz">
             <objects>
-                <tableViewController id="aah-SM-WkR" customClass="PhotoCaptureTableViewController" customModule="PhotoChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Take Photo" id="aah-SM-WkR" customClass="PhotoCaptureTableViewController" customModule="PhotoChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iYv-ku-xEC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -32,13 +32,14 @@ extension PhotoCaptureTableViewController {
 extension PhotoCaptureTableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return viewModel.numberOfSections
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+    override func tableView(
+        _ tableView: UITableView,
+        numberOfRowsInSection section: Int
+    ) -> Int {
+        return viewModel.numberOfRowsInSection(section)
     }
 }
 
@@ -47,12 +48,6 @@ extension PhotoCaptureTableViewController {
 extension PhotoCaptureTableViewController {
     
     fileprivate func showImagePickerControllerIfNeeded() {
-        guard viewModel.isRequestingImage else {
-            return
-        }
-        
-        imageProvider.capturePhoto(sourceViewController: self) { (photo) in
-            self.viewModel.photo = photo
-        }
+        viewModel.captureImageIfNeeded(sourceViewController: self)
     }
 }
