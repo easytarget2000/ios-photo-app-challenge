@@ -20,11 +20,12 @@
 		0B02174F22F35AA100EB6D15 /* StartMenuActionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02174E22F35AA100EB6D15 /* StartMenuActionDelegate.swift */; };
 		0B02175122F3949300EB6D15 /* PhotoCaptureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02175022F3949300EB6D15 /* PhotoCaptureTableViewController.swift */; };
 		0B02175322F394A000EB6D15 /* PhotoCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02175222F394A000EB6D15 /* PhotoCaptureViewModel.swift */; };
-		0B02175522F395F700EB6D15 /* PhotoCaptureImageUIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02175422F395F700EB6D15 /* PhotoCaptureImageUIProvider.swift */; };
-		0B02175722F397C800EB6D15 /* PhotoCaptureImageProviderCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02175622F397C800EB6D15 /* PhotoCaptureImageProviderCallback.swift */; };
+		0B02175522F395F700EB6D15 /* PhotoCaptureUIProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02175422F395F700EB6D15 /* PhotoCaptureUIProvider.swift */; };
+		0B02175722F397C800EB6D15 /* PhotoCaptureProviderCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02175622F397C800EB6D15 /* PhotoCaptureProviderCallback.swift */; };
 		0B02175922F399F800EB6D15 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02175822F399F800EB6D15 /* Photo.swift */; };
 		0BDD255622F788CF002B0346 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD255522F788CF002B0346 /* Dynamic.swift */; };
 		0BDD255822F78AAA002B0346 /* PhotoCaptureNamingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD255722F78AAA002B0346 /* PhotoCaptureNamingCell.swift */; };
+		0BDD255A22F79162002B0346 /* PhotoStorageWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD255922F79162002B0346 /* PhotoStorageWriter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,11 +65,12 @@
 		0B02174E22F35AA100EB6D15 /* StartMenuActionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartMenuActionDelegate.swift; sourceTree = "<group>"; };
 		0B02175022F3949300EB6D15 /* PhotoCaptureTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureTableViewController.swift; sourceTree = "<group>"; };
 		0B02175222F394A000EB6D15 /* PhotoCaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureViewModel.swift; sourceTree = "<group>"; };
-		0B02175422F395F700EB6D15 /* PhotoCaptureImageUIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureImageUIProvider.swift; sourceTree = "<group>"; };
-		0B02175622F397C800EB6D15 /* PhotoCaptureImageProviderCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureImageProviderCallback.swift; sourceTree = "<group>"; };
+		0B02175422F395F700EB6D15 /* PhotoCaptureUIProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureUIProvider.swift; sourceTree = "<group>"; };
+		0B02175622F397C800EB6D15 /* PhotoCaptureProviderCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureProviderCallback.swift; sourceTree = "<group>"; };
 		0B02175822F399F800EB6D15 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0BDD255522F788CF002B0346 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		0BDD255722F78AAA002B0346 /* PhotoCaptureNamingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureNamingCell.swift; sourceTree = "<group>"; };
+		0BDD255922F79162002B0346 /* PhotoStorageWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageWriter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,11 +152,12 @@
 		0B02173F22F353DE00EB6D15 /* PhotoCapture */ = {
 			isa = PBXGroup;
 			children = (
-				0B02175622F397C800EB6D15 /* PhotoCaptureImageProviderCallback.swift */,
-				0B02175422F395F700EB6D15 /* PhotoCaptureImageUIProvider.swift */,
 				0BDD255722F78AAA002B0346 /* PhotoCaptureNamingCell.swift */,
+				0B02175622F397C800EB6D15 /* PhotoCaptureProviderCallback.swift */,
 				0B02175022F3949300EB6D15 /* PhotoCaptureTableViewController.swift */,
+				0B02175422F395F700EB6D15 /* PhotoCaptureUIProvider.swift */,
 				0B02175222F394A000EB6D15 /* PhotoCaptureViewModel.swift */,
+				0BDD255922F79162002B0346 /* PhotoStorageWriter.swift */,
 			);
 			path = PhotoCapture;
 			sourceTree = "<group>";
@@ -349,13 +352,14 @@
 				0B02174822F3547400EB6D15 /* StartMenuViewModel.swift in Sources */,
 				0B02175322F394A000EB6D15 /* PhotoCaptureViewModel.swift in Sources */,
 				0B02174F22F35AA100EB6D15 /* StartMenuActionDelegate.swift in Sources */,
+				0BDD255A22F79162002B0346 /* PhotoStorageWriter.swift in Sources */,
 				0B02174D22F357E200EB6D15 /* StartMenuAction.swift in Sources */,
 				0B02171222F3535200EB6D15 /* AppDelegate.swift in Sources */,
 				0B02174622F3546B00EB6D15 /* StartMenuTableViewController.swift in Sources */,
-				0B02175722F397C800EB6D15 /* PhotoCaptureImageProviderCallback.swift in Sources */,
+				0B02175722F397C800EB6D15 /* PhotoCaptureProviderCallback.swift in Sources */,
 				0BDD255822F78AAA002B0346 /* PhotoCaptureNamingCell.swift in Sources */,
 				0BDD255622F788CF002B0346 /* Dynamic.swift in Sources */,
-				0B02175522F395F700EB6D15 /* PhotoCaptureImageUIProvider.swift in Sources */,
+				0B02175522F395F700EB6D15 /* PhotoCaptureUIProvider.swift in Sources */,
 				0B02175122F3949300EB6D15 /* PhotoCaptureTableViewController.swift in Sources */,
 				0B02175922F399F800EB6D15 /* Photo.swift in Sources */,
 			);

@@ -5,8 +5,11 @@ class PhotoCaptureTableViewController: UITableViewController {
     // MARK: - Values
     
     @IBOutlet weak var viewModel: PhotoCaptureViewModel!
-    @IBOutlet weak var imageProvider: PhotoCaptureImageUIProvider!
-
+    @IBOutlet weak var imageProvider: PhotoCaptureUIProvider!
+    @IBAction func saveButtonTouched(_ sender: Any) {
+        savePhoto()
+    }
+    
 }
 
 // MARK: - UIViewController Life Cycle
@@ -45,6 +48,13 @@ extension PhotoCaptureTableViewController {
     
     override func tableView(
         _ tableView: UITableView,
+        titleForHeaderInSection section: Int
+    ) -> String? {
+        return viewModel.titleForHeaderInSection(section)
+    }
+    
+    override func tableView(
+        _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
         let namingCell = tableView.dequeueReusableCell(
@@ -60,7 +70,7 @@ extension PhotoCaptureTableViewController {
 
 extension PhotoCaptureTableViewController {
     
-    fileprivate func setupViewModel() {
+    private func setupViewModel() {
         viewModel.numberOfSections.bind = {
             [weak self] in
             let _ = $0
@@ -68,11 +78,15 @@ extension PhotoCaptureTableViewController {
         }
     }
     
-    fileprivate func showImagePickerControllerIfNeeded() {
+    private func showImagePickerControllerIfNeeded() {
         viewModel.captureImageIfNeeded(sourceViewController: self)
     }
     
-    fileprivate func reloadTableView() {
+    private func reloadTableView() {
         tableView.reloadData()
+    }
+    
+    private func savePhoto() {
+        viewModel.savePhoto()
     }
 }

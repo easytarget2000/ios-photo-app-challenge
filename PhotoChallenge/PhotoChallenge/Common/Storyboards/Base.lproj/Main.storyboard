@@ -74,6 +74,13 @@
                             <outlet property="delegate" destination="aah-SM-WkR" id="zLN-xI-vGQ"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Take Photo" id="0Cw-0u-YVd">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="T0q-vc-e8e">
+                            <connections>
+                                <action selector="saveButtonTouched:" destination="aah-SM-WkR" id="yz1-je-5Ba"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageProvider" destination="UpG-bo-aZR" id="hD9-76-5tt"/>
                         <outlet property="viewModel" destination="aea-NU-X3c" id="Jse-Jm-ojM"/>
@@ -85,7 +92,8 @@
                         <outlet property="imageProvider" destination="UpG-bo-aZR" id="mDg-8w-U6f"/>
                     </connections>
                 </customObject>
-                <customObject id="UpG-bo-aZR" customClass="PhotoCaptureImageUIProvider" customModule="PhotoChallenge" customModuleProvider="target"/>
+                <customObject id="UpG-bo-aZR" customClass="PhotoCaptureUIProvider" customModule="PhotoChallenge" customModuleProvider="target"/>
+                <customObject id="Efo-xz-m4l" customClass="PhotoStorageWriter" customModule="PhotoChallenge" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1672" y="-282"/>
         </scene>
