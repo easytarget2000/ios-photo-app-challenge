@@ -15,6 +15,7 @@ extension PhotoCaptureTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViewModel()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +33,7 @@ extension PhotoCaptureTableViewController {
 extension PhotoCaptureTableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel.numberOfSections
+        return viewModel.numberOfSections.value ?? 0
     }
 
     override func tableView(
@@ -41,13 +42,37 @@ extension PhotoCaptureTableViewController {
     ) -> Int {
         return viewModel.numberOfRowsInSection(section)
     }
+    
+    override func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        let namingCell = tableView.dequeueReusableCell(
+            withIdentifier: PhotoCaptureNamingCell.identifier,
+            for: indexPath
+        )
+        
+        return namingCell
+    }
 }
 
 // MARK: - Implementations
 
 extension PhotoCaptureTableViewController {
     
+    fileprivate func setupViewModel() {
+        viewModel.numberOfSections.bind = {
+            [weak self] in
+            let _ = $0
+            self?.reloadTableView()
+        }
+    }
+    
     fileprivate func showImagePickerControllerIfNeeded() {
         viewModel.captureImageIfNeeded(sourceViewController: self)
+    }
+    
+    fileprivate func reloadTableView() {
+        tableView.reloadData()
     }
 }

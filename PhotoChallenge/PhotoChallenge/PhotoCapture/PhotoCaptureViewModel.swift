@@ -4,10 +4,15 @@ class PhotoCaptureViewModel: NSObject {
     
     @IBOutlet weak var imageProvider: PhotoCaptureImageUIProvider!
 
-    fileprivate(set) var photo: Photo?
-    
-    var numberOfSections: Int {
-        return photo == nil ? 0 : 1
+    var numberOfSections = Dynamic(0)
+    fileprivate var photo: Photo? {
+        didSet {
+            if let _ = photo {
+                numberOfSections = Dynamic(1)
+            } else {
+                numberOfSections = Dynamic(0)
+            }
+        }
     }
 
     func captureImageIfNeeded(sourceViewController: UIViewController) {
@@ -21,7 +26,7 @@ class PhotoCaptureViewModel: NSObject {
         }
     }
     
-    func numberOfRowsInSection(_ section: Int) {
+    func numberOfRowsInSection(_ section: Int) -> Int {
         return 1
     }
 }
