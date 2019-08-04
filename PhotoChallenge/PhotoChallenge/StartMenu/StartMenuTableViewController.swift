@@ -4,6 +4,7 @@ class StartMenuTableViewController: UITableViewController {
     
     // MARK: - Values
     
+    static let toPhotoCaptureSegueIdentifier = "StartMenuToPhotoCapture"
     static let actionCellIdentifier = "StartMenuActionCell"
     @IBOutlet weak var viewModel: StartMenuViewModel!
     
@@ -112,7 +113,11 @@ extension StartMenuTableViewController {
     }
     
     fileprivate func showCaptureViewController() {
-        
+        performSegue(
+            withIdentifier:
+                StartMenuTableViewController.toPhotoCaptureSegueIdentifier,
+            sender: nil
+        )
     }
     
     fileprivate func showGalleryViewController() {
