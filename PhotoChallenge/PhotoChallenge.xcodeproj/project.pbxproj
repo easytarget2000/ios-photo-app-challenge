@@ -24,6 +24,7 @@
 		0B02175722F397C800EB6D15 /* PhotoCaptureProviderCallback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02175622F397C800EB6D15 /* PhotoCaptureProviderCallback.swift */; };
 		0B02175922F399F800EB6D15 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B02175822F399F800EB6D15 /* Photo.swift */; };
 		0BA15E0322F8734800487037 /* BindingTextFIeld.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA15E0222F8734800487037 /* BindingTextFIeld.swift */; };
+		0BA15E0522F8784300487037 /* PhotoDirectoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA15E0422F8784300487037 /* PhotoDirectoryProvider.swift */; };
 		0BDD255622F788CF002B0346 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD255522F788CF002B0346 /* Dynamic.swift */; };
 		0BDD255822F78AAA002B0346 /* PhotoCaptureNamingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD255722F78AAA002B0346 /* PhotoCaptureNamingCell.swift */; };
 		0BDD255A22F79162002B0346 /* PhotoStorageWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD255922F79162002B0346 /* PhotoStorageWriter.swift */; };
@@ -70,6 +71,7 @@
 		0B02175622F397C800EB6D15 /* PhotoCaptureProviderCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureProviderCallback.swift; sourceTree = "<group>"; };
 		0B02175822F399F800EB6D15 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0BA15E0222F8734800487037 /* BindingTextFIeld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingTextFIeld.swift; sourceTree = "<group>"; };
+		0BA15E0422F8784300487037 /* PhotoDirectoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDirectoryProvider.swift; sourceTree = "<group>"; };
 		0BDD255522F788CF002B0346 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		0BDD255722F78AAA002B0346 /* PhotoCaptureNamingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureNamingCell.swift; sourceTree = "<group>"; };
 		0BDD255922F79162002B0346 /* PhotoStorageWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageWriter.swift; sourceTree = "<group>"; };
@@ -185,12 +187,12 @@
 		0B02174222F3540B00EB6D15 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				0BA15E0222F8734800487037 /* BindingTextFIeld.swift */,
-				0BDD255522F788CF002B0346 /* Dynamic.swift */,
 				0B02175822F399F800EB6D15 /* Photo.swift */,
 				0B02174422F3543600EB6D15 /* Assets */,
+				0BA15E0622F87A9600487037 /* Storage */,
 				0B02174322F3542500EB6D15 /* Storyboards */,
 				0B02174922F3556400EB6D15 /* Strings */,
+				0BA15E0722F87AB400487037 /* ViewBinding */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -218,6 +220,23 @@
 				0B02174A22F3557300EB6D15 /* Localizable.strings */,
 			);
 			path = Strings;
+			sourceTree = "<group>";
+		};
+		0BA15E0622F87A9600487037 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				0BA15E0422F8784300487037 /* PhotoDirectoryProvider.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		0BA15E0722F87AB400487037 /* ViewBinding */ = {
+			isa = PBXGroup;
+			children = (
+				0BA15E0222F8734800487037 /* BindingTextFIeld.swift */,
+				0BDD255522F788CF002B0346 /* Dynamic.swift */,
+			);
+			path = ViewBinding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BA15E0522F8784300487037 /* PhotoDirectoryProvider.swift in Sources */,
 				0B02174822F3547400EB6D15 /* StartMenuViewModel.swift in Sources */,
 				0B02175322F394A000EB6D15 /* PhotoCaptureViewModel.swift in Sources */,
 				0B02174F22F35AA100EB6D15 /* StartMenuActionDelegate.swift in Sources */,

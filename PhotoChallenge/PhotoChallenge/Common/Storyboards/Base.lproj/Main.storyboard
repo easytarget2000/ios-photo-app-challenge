@@ -107,10 +107,16 @@
                 <customObject id="aea-NU-X3c" customClass="PhotoCaptureViewModel" customModule="PhotoChallenge" customModuleProvider="target">
                     <connections>
                         <outlet property="imageProvider" destination="UpG-bo-aZR" id="mDg-8w-U6f"/>
+                        <outlet property="storageWriter" destination="Efo-xz-m4l" id="LDU-ZA-ycL"/>
                     </connections>
                 </customObject>
                 <customObject id="UpG-bo-aZR" customClass="PhotoCaptureUIProvider" customModule="PhotoChallenge" customModuleProvider="target"/>
-                <customObject id="Efo-xz-m4l" customClass="PhotoStorageWriter" customModule="PhotoChallenge" customModuleProvider="target"/>
+                <customObject id="Efo-xz-m4l" customClass="PhotoStorageWriter" customModule="PhotoChallenge" customModuleProvider="target">
+                    <connections>
+                        <outlet property="directoryProvider" destination="mfI-MV-edK" id="C6b-o5-NAK"/>
+                    </connections>
+                </customObject>
+                <customObject id="mfI-MV-edK" userLabel="Directory Provider" customClass="PhotoDirectoryProvider" customModule="PhotoChallenge" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1672" y="-282"/>
         </scene>
