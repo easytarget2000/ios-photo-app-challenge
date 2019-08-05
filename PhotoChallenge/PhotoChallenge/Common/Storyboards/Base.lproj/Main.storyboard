@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -76,6 +77,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="S6U-hO-3mM">
+                                            <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -89,6 +91,7 @@
                     </tableView>
                     <connections>
                         <outlet property="viewModel" destination="tM8-Sv-h1h" id="h3B-qF-7se"/>
+                        <segue destination="fAK-ec-nHb" kind="show" id="FJU-cc-6Zd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFi-fO-TRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -105,6 +108,21 @@
                 <customObject id="kdJ-4n-GUW" customClass="PhotoDirectoryProvider" customModule="PhotoChallenge" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1671" y="503"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wKu-OT-rlP">
+            <objects>
+                <viewController id="fAK-ec-nHb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QvE-wC-Ai9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Cyo-yL-vc0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8sB-yg-ANq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2642" y="503"/>
         </scene>
         <!--Take Photo-->
         <scene sceneID="mgE-ew-eFz">
