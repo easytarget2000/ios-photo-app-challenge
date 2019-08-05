@@ -6,6 +6,7 @@ Coding Challenge: A mobile app that captures, stores and displays photos
 
 ## Approach
 I started working on this take home test by separating the task description into small issues. These issues filled up a simple [Kanban board](https://github.com/easytargetmixel/ios-photo-app-challenge/projects/1), along with my initial thoughts and ideas in the issue descriptions. 
+
 The first task, "Start menu" acts as the starting point for the project, as well as, a connecting point for the two main features of the app, capturing photos and displaying previously taken photos. Issue #1 can be seen as the most basic requirement: build an app that displays two options to the user. It is the framework for all other features and implementations.
 
 ## Possible Improvements
