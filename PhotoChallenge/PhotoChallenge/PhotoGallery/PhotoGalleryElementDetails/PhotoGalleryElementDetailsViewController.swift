@@ -3,6 +3,7 @@ import UIKit
 class PhotoGalleryElementDetailsViewController: UIViewController {
     
     @IBOutlet weak var viewModel: PhotoGalleryElementDetailsViewModel!
+    @IBOutlet weak var imageView: UIImageView!
     
 }
 
@@ -22,6 +23,6 @@ extension PhotoGalleryElementDetailsViewController {
 extension PhotoGalleryElementDetailsViewController {
     
     private func showPhoto() {
-        
+        imageView.image = viewModel.photo
     }
 }
