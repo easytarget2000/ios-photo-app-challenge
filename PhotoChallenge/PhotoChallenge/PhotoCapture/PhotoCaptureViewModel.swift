@@ -3,6 +3,7 @@ import UIKit.UIImage
 class PhotoCaptureViewModel: NSObject {
     
     @IBOutlet weak var imageProvider: PhotoCaptureUIProvider!
+    @IBOutlet weak var storageWriter: PhotoStorageWriter!
     let namingSectionHeaderTitle = NSLocalizedString(
         "photo_capture_naming_header",
         comment: "File name"
@@ -47,6 +48,14 @@ extension PhotoCaptureViewModel {
     
     func titleForHeaderInSection(_ section: Int) -> String {
         return namingSectionHeaderTitle
+    }
+    
+    func setupNamingCell(_ cell: PhotoCaptureNamingCell) {
+        cell.textField.text = photoName.value
+        cell.textField.bind {
+            [weak self] in
+            self?.photoName.value = $0
+        }
     }
     
     func savePhoto() {

@@ -66,7 +66,23 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dgn-jg-8UV" id="fCX-Xx-WBm">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SD7-7S-gjB" customClass="BindingTextField" customModule="PhotoChallenge" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="7" width="374" height="30"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="SD7-7S-gjB" firstAttribute="centerY" secondItem="fCX-Xx-WBm" secondAttribute="centerY" id="5O0-yf-gIH"/>
+                                        <constraint firstAttribute="trailing" secondItem="SD7-7S-gjB" secondAttribute="trailing" constant="20" symbolic="YES" id="7Dr-Eh-rdu"/>
+                                        <constraint firstItem="SD7-7S-gjB" firstAttribute="leading" secondItem="fCX-Xx-WBm" secondAttribute="leading" constant="20" symbolic="YES" id="Kqk-3x-1S4"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="textField" destination="SD7-7S-gjB" id="Bxe-7y-w1l"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
