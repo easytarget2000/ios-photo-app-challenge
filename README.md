@@ -2,7 +2,7 @@
 Coding Challenge: A mobile app that captures, stores and displays photos
 
 ## Build Instructions
-
+The app has been developed in Xcode 10.3 using Swift 5 with a deployment target of iOS 12.0. No external dependencies are required. Simply run the Photo Challenge target in Xcode on an iPhone or iPad running iOS 12.0 or later. Please note that iOS simulators do not support camera operations.
 
 ## Development Approach
 I started working on this take home test by separating the task description into small issues. These issues filled up a simple [Kanban board](https://github.com/easytargetmixel/ios-photo-app-challenge/projects/1), along with my initial thoughts and ideas in the issue descriptions. 
