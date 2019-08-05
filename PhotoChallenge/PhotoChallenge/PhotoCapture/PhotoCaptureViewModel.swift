@@ -7,7 +7,12 @@ class PhotoCaptureViewModel: NSObject {
         "photo_capture_naming_header",
         comment: "File name"
     )
+    let defaultPhotoName = NSLocalizedString(
+        "photo_capture_default_name",
+        comment: "Untitled"
+    )
     var numberOfSections = Dynamic(0)
+    var photoName: Dynamic<String>
     fileprivate var photo: Photo? {
         didSet {
             if let _ = photo {
@@ -18,6 +23,9 @@ class PhotoCaptureViewModel: NSObject {
         }
     }
     
+    override init() {
+        photoName = Dynamic(defaultPhotoName)
+    }
 }
 
 extension PhotoCaptureViewModel {

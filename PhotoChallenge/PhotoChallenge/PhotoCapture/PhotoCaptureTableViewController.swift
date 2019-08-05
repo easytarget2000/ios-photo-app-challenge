@@ -60,7 +60,7 @@ extension PhotoCaptureTableViewController {
         let namingCell = tableView.dequeueReusableCell(
             withIdentifier: PhotoCaptureNamingCell.identifier,
             for: indexPath
-        )
+        ) as! PhotoCaptureNamingCell
         
         return namingCell
     }

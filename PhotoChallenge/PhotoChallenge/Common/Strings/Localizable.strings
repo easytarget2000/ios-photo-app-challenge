@@ -2,3 +2,4 @@
 "start_menu_gallery_button"    = "View Photos";
 
 "photo_capture_naming_header"   = "File name";
+"photo_capture_default_name"    = "untitled";
