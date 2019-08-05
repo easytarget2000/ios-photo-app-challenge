@@ -1,13 +1,13 @@
 import UIKit.UIImagePickerController
 
-class PhotoCaptureImageUIProvider: NSObject {
+class PhotoCaptureUIProvider: NSObject {
     
     var imagePickerController = UIImagePickerController()
-    var callback: PhotoCaptureImageProviderCallback?
+    var callback: PhotoCaptureProviderCallback?
     
     func capturePhoto(
         sourceViewController: UIViewController,
-        callback: @escaping PhotoCaptureImageProviderCallback
+        callback: @escaping PhotoCaptureProviderCallback
     ) {
         self.callback = callback
         guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
@@ -28,7 +28,7 @@ class PhotoCaptureImageUIProvider: NSObject {
 
 // MARK: - UIImagePickerControllerDelegate
 
-extension PhotoCaptureImageUIProvider:
+extension PhotoCaptureUIProvider:
 UIImagePickerControllerDelegate,
 UINavigationControllerDelegate {
     
@@ -54,14 +54,14 @@ UINavigationControllerDelegate {
 
 // MARK: - Implementations
 
-extension PhotoCaptureImageUIProvider {
+extension PhotoCaptureUIProvider {
     
-    fileprivate func handleImageSelection(image: UIImage) {
+    private func handleImageSelection(image: UIImage) {
         callback?(image)
         callback = nil
     }
     
-    fileprivate func handleNoImageSelection() {
+    private func handleNoImageSelection() {
         callback = nil
     }
     
