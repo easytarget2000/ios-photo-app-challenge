@@ -187,9 +187,9 @@
 			isa = PBXGroup;
 			children = (
 				0BA15E1922F8907400487037 /* Date.swift */,
+				0BA15E1522F88FDC00487037 /* PhotoGalleryElement.swift */,
 				0BA15E0F22F88E6700487037 /* PhotoGalleryElementCell.swift */,
 				0BA15E1322F88EAB00487037 /* PhotoGalleryElementsProvider.swift */,
-				0BA15E1522F88FDC00487037 /* PhotoGalleryElement.swift */,
 				0BA15E0D22F88E5300487037 /* PhotoGalleryTableViewController.swift */,
 				0BA15E1122F88E7000487037 /* PhotoGalleryViewModel.swift */,
 			);
