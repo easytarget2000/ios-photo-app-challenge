@@ -14,7 +14,7 @@ class PhotoCaptureViewModel: NSObject {
     )
     var numberOfSections = Dynamic(0)
     var photoName: Dynamic<String>
-    fileprivate var photo: Photo? {
+    var photo: Photo? {
         didSet {
             if let _ = photo {
                 numberOfSections = Dynamic(1)
@@ -58,10 +58,12 @@ extension PhotoCaptureViewModel {
         }
     }
     
-    func savePhoto() {
+    func savePhoto() -> Bool {
         guard let photo = photo, let photoName = photoName.value else {
-            return
+            return false
         }
+        
         storageWriter.savePhoto(photo, fileName: photoName)
+        return true
     }
 }

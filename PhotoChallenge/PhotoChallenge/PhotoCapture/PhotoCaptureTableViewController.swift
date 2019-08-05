@@ -87,6 +87,6 @@ extension PhotoCaptureTableViewController {
     }
     
     private func savePhoto() {
-        viewModel.savePhoto()
+        let _ = viewModel.savePhoto()
     }
 }
