@@ -40,6 +40,17 @@ extension PhotoGalleryTableViewController {
         return numberOfRowsInSection(section)
     }
 
+    override func tableView(
+        _ tableView: UITableView,
+        cellForRowAt indexPath: IndexPath
+    ) -> UITableViewCell {
+        let elementCell = tableView.dequeueReusableCell(
+            withIdentifier: PhotoGalleryElementCell.identifier,
+            for: indexPath
+        )
+        viewModel.populateElementCell(elementCell, atIndexPath: indexPath)
+        return elementCell
+    }
 }
 
 // MARK: - Implementations

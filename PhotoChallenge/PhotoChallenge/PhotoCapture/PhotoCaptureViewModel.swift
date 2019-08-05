@@ -2,16 +2,16 @@ import UIKit.UIImage
 
 class PhotoCaptureViewModel: NSObject {
     
-    @IBOutlet weak var imageProvider: PhotoCaptureUIProvider!
-    @IBOutlet weak var storageWriter: PhotoStorageWriter!
-    let namingSectionHeaderTitle = NSLocalizedString(
+    static let namingSectionHeaderTitle = NSLocalizedString(
         "photo_capture_naming_header",
         comment: "File name"
     )
-    let defaultPhotoName = NSLocalizedString(
+    static let defaultPhotoName = NSLocalizedString(
         "photo_capture_default_name",
         comment: "Untitled"
     )
+    @IBOutlet weak var imageProvider: PhotoCaptureUIProvider!
+    @IBOutlet weak var storageWriter: PhotoStorageWriter!
     var numberOfSections = Dynamic(0)
     var photoName: Dynamic<String>
     var photo: Photo? {
@@ -25,7 +25,7 @@ class PhotoCaptureViewModel: NSObject {
     }
     
     override init() {
-        photoName = Dynamic(defaultPhotoName)
+        photoName = Dynamic(PhotoCaptureViewModel.defaultPhotoName)
     }
 }
 
@@ -47,7 +47,7 @@ extension PhotoCaptureViewModel {
     }
     
     func titleForHeaderInSection(_ section: Int) -> String {
-        return namingSectionHeaderTitle
+        return PhotoCaptureViewModel.namingSectionHeaderTitle
     }
     
     func setupNamingCell(_ cell: PhotoCaptureNamingCell) {
