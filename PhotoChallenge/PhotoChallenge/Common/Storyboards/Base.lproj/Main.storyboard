@@ -85,7 +85,12 @@
                         <outlet property="contentProvider" destination="rdL-Jj-dJ2" id="L3o-BZ-N9J"/>
                     </connections>
                 </customObject>
-                <customObject id="rdL-Jj-dJ2" customClass="PhotoGalleryContentProvider" customModule="PhotoChallenge" customModuleProvider="target"/>
+                <customObject id="rdL-Jj-dJ2" customClass="PhotoGalleryElementsProvider" customModule="PhotoChallenge" customModuleProvider="target">
+                    <connections>
+                        <outlet property="directoryProvider" destination="kdJ-4n-GUW" id="QdL-Jt-WHb"/>
+                    </connections>
+                </customObject>
+                <customObject id="kdJ-4n-GUW" customClass="PhotoDirectoryProvider" customModule="PhotoChallenge" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="1671" y="503"/>
         </scene>

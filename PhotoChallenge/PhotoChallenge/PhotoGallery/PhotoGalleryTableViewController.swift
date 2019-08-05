@@ -47,7 +47,7 @@ extension PhotoGalleryTableViewController {
 extension PhotoGalleryTableViewController {
     
     private func setupViewModel() {
-        viewModel.elements.bind {
+        viewModel.elements.bind = {
             [weak self] in
             let _ = $0
             self?.reloadTableView()
