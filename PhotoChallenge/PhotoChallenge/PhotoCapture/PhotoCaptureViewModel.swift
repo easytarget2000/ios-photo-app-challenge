@@ -63,7 +63,7 @@ extension PhotoCaptureViewModel {
             return false
         }
         
-        storageWriter.savePhoto(photo, fileName: photoName)
+        storageWriter.savePhoto(photo, name: photoName)
         return true
     }
 }
