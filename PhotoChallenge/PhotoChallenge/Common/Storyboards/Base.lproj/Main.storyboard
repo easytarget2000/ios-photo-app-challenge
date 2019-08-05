@@ -68,16 +68,17 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SD7-7S-gjB" customClass="BindingTextField" customModule="PhotoChallenge" customModuleProvider="target">
-                                            <rect key="frame" x="20" y="7" width="374" height="30"/>
+                                            <rect key="frame" x="20" y="8" width="374" height="27.5"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="SD7-7S-gjB" firstAttribute="centerY" secondItem="fCX-Xx-WBm" secondAttribute="centerY" id="5O0-yf-gIH"/>
                                         <constraint firstAttribute="trailing" secondItem="SD7-7S-gjB" secondAttribute="trailing" constant="20" symbolic="YES" id="7Dr-Eh-rdu"/>
                                         <constraint firstItem="SD7-7S-gjB" firstAttribute="leading" secondItem="fCX-Xx-WBm" secondAttribute="leading" constant="20" symbolic="YES" id="Kqk-3x-1S4"/>
+                                        <constraint firstItem="SD7-7S-gjB" firstAttribute="top" secondItem="fCX-Xx-WBm" secondAttribute="top" constant="8" id="gg5-wS-fZN"/>
+                                        <constraint firstAttribute="bottom" secondItem="SD7-7S-gjB" secondAttribute="bottom" constant="8" id="hxL-ZE-0qA"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>

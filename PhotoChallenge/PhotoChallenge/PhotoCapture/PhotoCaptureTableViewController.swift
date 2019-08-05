@@ -61,7 +61,7 @@ extension PhotoCaptureTableViewController {
             withIdentifier: PhotoCaptureNamingCell.identifier,
             for: indexPath
         ) as! PhotoCaptureNamingCell
-        
+        viewModel.setupNamingCell(namingCell)
         return namingCell
     }
 }
