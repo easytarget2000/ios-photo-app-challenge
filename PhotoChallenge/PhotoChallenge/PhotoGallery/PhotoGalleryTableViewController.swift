@@ -2,6 +2,7 @@ import UIKit
 
 class PhotoGalleryTableViewController: UITableViewController {
     
+    static let toDetailsSegue = "PhotoGalleryToElementDetailsSegue"
     @IBOutlet weak var viewModel: PhotoGalleryViewModel!
     private var numberOfSections: Int {
         get {
@@ -22,6 +23,13 @@ extension PhotoGalleryTableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         fetchElements()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detailsViewController = segue.destination
+            as! PhotoGalleryElementDetailsViewController
+        detailsViewController.viewModel.element
+            = (sender as! PhotoGalleryElement)
     }
 }
 
@@ -53,6 +61,19 @@ extension PhotoGalleryTableViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
+
+extension PhotoGalleryTableViewController {
+    
+    override func tableView(
+        _ tableView: UITableView,
+        didSelectRowAt indexPath: IndexPath
+    ) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        handleSelection(indexPath: indexPath)
+    }
+}
+
 // MARK: - Implementations
 
 extension PhotoGalleryTableViewController {
@@ -73,7 +94,21 @@ extension PhotoGalleryTableViewController {
         return viewModel.numberOfRowsInSection(section)
     }
     
+    private func handleSelection(indexPath: IndexPath) {
+        viewModel.handleSelection(indexPath: indexPath) { (element) in
+            self.showDetailsOfElement(element)
+        }
+    }
+    
     private func reloadTableView() {
         tableView.reloadData()
     }
+    
+    private func showDetailsOfElement(_ element: PhotoGalleryElement) {
+        performSegue(
+            withIdentifier: PhotoGalleryTableViewController.toDetailsSegue,
+            sender: element
+        )
+    }
+
 }
