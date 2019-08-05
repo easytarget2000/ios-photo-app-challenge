@@ -44,12 +44,50 @@
                     <connections>
                         <outlet property="viewModel" destination="Gr6-JC-v1j" id="zrR-od-cvd"/>
                         <segue destination="aah-SM-WkR" kind="show" identifier="StartMenuToPhotoCapture" id="Rd6-DV-IL0"/>
+                        <segue destination="HSj-i4-mUW" kind="show" identifier="StartMenuToPhotoGallerySegue" id="JH5-M7-GCV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fk-AA-AKb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="Gr6-JC-v1j" customClass="StartMenuViewModel" customModule="PhotoChallenge" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="788" y="65"/>
+        </scene>
+        <!--Photo Gallery Table View Controller-->
+        <scene sceneID="3Rn-G1-tb4">
+            <objects>
+                <tableViewController id="HSj-i4-mUW" customClass="PhotoGalleryTableViewController" customModule="PhotoChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gci-nX-3au">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FJU-hy-76m">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FJU-hy-76m" id="SvT-ZL-RCE">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HSj-i4-mUW" id="uFS-PO-5lK"/>
+                            <outlet property="delegate" destination="HSj-i4-mUW" id="oJW-5A-vXQ"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="viewModel" destination="tM8-Sv-h1h" id="h3B-qF-7se"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LFi-fO-TRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="tM8-Sv-h1h" customClass="PhotoGalleryViewModel" customModule="PhotoChallenge" customModuleProvider="target">
+                    <connections>
+                        <outlet property="contentProvider" destination="rdL-Jj-dJ2" id="L3o-BZ-N9J"/>
+                    </connections>
+                </customObject>
+                <customObject id="rdL-Jj-dJ2" customClass="PhotoGalleryContentProvider" customModule="PhotoChallenge" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="1671" y="503"/>
         </scene>
         <!--Take Photo-->
         <scene sceneID="mgE-ew-eFz">

@@ -5,6 +5,7 @@ class StartMenuTableViewController: UITableViewController {
     // MARK: - Values
     
     static let toPhotoCaptureSegueIdentifier = "StartMenuToPhotoCapture"
+    static let toPhotoGallerySegueIdentifier = "StartMenuToPhotoGallerySegue"
     static let actionCellIdentifier = "StartMenuActionCell"
     @IBOutlet weak var viewModel: StartMenuViewModel!
     
