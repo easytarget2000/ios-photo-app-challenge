@@ -3,7 +3,7 @@ import Foundation
 class PhotoGalleryElementDetailsViewModel: NSObject {
     
     var element: PhotoGalleryElement!
-    var photo: Photo {
+    var photo: Photo? {
         get {
             return element.photo
         }
