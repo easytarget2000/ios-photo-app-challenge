@@ -5,6 +5,7 @@ class StartMenuTableViewController: UITableViewController {
     // MARK: - Values
     
     static let toPhotoCaptureSegueIdentifier = "StartMenuToPhotoCapture"
+    static let toPhotoGallerySegueIdentifier = "StartMenuToPhotoGallerySegue"
     static let actionCellIdentifier = "StartMenuActionCell"
     @IBOutlet weak var viewModel: StartMenuViewModel!
     
@@ -90,29 +91,29 @@ extension StartMenuTableViewController: StartMenuActionDelegate {
 
 extension StartMenuTableViewController {
     
-    fileprivate func configureViewModel() {
+    private func configureViewModel() {
         viewModel.actionDelegate = self
     }
     
-    fileprivate func numOfButtonsInSection(_ section: Int) -> Int {
+    private func numOfButtonsInSection(_ section: Int) -> Int {
         return viewModel.numOfButtonsInSection(section)
     }
     
-    fileprivate func performActionInSection(
+    private func performActionInSection(
         _ section: Int,
         atIndex index: Int
     ) {
         viewModel.performActionInSection(section, atIndex: index)
     }
     
-    fileprivate func titleForActionInSection(
+    private func titleForActionInSection(
         _ section: Int,
         atIndex index: Int
     ) -> String {
         return viewModel.titleForActionInSection(section, atIndex: index)
     }
     
-    fileprivate func showCaptureViewController() {
+    private func showCaptureViewController() {
         performSegue(
             withIdentifier:
                 StartMenuTableViewController.toPhotoCaptureSegueIdentifier,
@@ -120,7 +121,11 @@ extension StartMenuTableViewController {
         )
     }
     
-    fileprivate func showGalleryViewController() {
-        
+    private func showGalleryViewController() {
+        performSegue(
+            withIdentifier:
+            StartMenuTableViewController.toPhotoGallerySegueIdentifier,
+            sender: nil
+        )
     }
 }

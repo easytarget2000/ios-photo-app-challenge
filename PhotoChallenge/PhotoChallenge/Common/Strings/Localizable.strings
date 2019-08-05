@@ -3,3 +3,5 @@
 
 "photo_capture_naming_header"   = "File name";
 "photo_capture_default_name"    = "untitled";
+
+"photo_gallery_element_format"  = "%@, %@";

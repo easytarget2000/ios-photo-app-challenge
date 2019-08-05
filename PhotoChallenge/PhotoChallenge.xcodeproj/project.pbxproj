@@ -27,6 +27,12 @@
 		0BA15E0522F8784300487037 /* PhotoDirectoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA15E0422F8784300487037 /* PhotoDirectoryProvider.swift */; };
 		0BA15E0922F88BAF00487037 /* PhotoStorageWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA15E0822F88BAF00487037 /* PhotoStorageWriterTests.swift */; };
 		0BA15E0B22F88C4B00487037 /* PhotoFileExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA15E0A22F88C4B00487037 /* PhotoFileExtension.swift */; };
+		0BA15E0E22F88E5300487037 /* PhotoGalleryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA15E0D22F88E5300487037 /* PhotoGalleryTableViewController.swift */; };
+		0BA15E1022F88E6700487037 /* PhotoGalleryElementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA15E0F22F88E6700487037 /* PhotoGalleryElementCell.swift */; };
+		0BA15E1222F88E7000487037 /* PhotoGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA15E1122F88E7000487037 /* PhotoGalleryViewModel.swift */; };
+		0BA15E1422F88EAB00487037 /* PhotoGalleryElementsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA15E1322F88EAB00487037 /* PhotoGalleryElementsProvider.swift */; };
+		0BA15E1622F88FDC00487037 /* PhotoGalleryElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA15E1522F88FDC00487037 /* PhotoGalleryElement.swift */; };
+		0BA15E1A22F8907400487037 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA15E1922F8907400487037 /* Date.swift */; };
 		0BDD255622F788CF002B0346 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD255522F788CF002B0346 /* Dynamic.swift */; };
 		0BDD255822F78AAA002B0346 /* PhotoCaptureNamingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD255722F78AAA002B0346 /* PhotoCaptureNamingCell.swift */; };
 		0BDD255A22F79162002B0346 /* PhotoStorageWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BDD255922F79162002B0346 /* PhotoStorageWriter.swift */; };
@@ -76,6 +82,12 @@
 		0BA15E0422F8784300487037 /* PhotoDirectoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDirectoryProvider.swift; sourceTree = "<group>"; };
 		0BA15E0822F88BAF00487037 /* PhotoStorageWriterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageWriterTests.swift; sourceTree = "<group>"; };
 		0BA15E0A22F88C4B00487037 /* PhotoFileExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoFileExtension.swift; sourceTree = "<group>"; };
+		0BA15E0D22F88E5300487037 /* PhotoGalleryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryTableViewController.swift; sourceTree = "<group>"; };
+		0BA15E0F22F88E6700487037 /* PhotoGalleryElementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryElementCell.swift; sourceTree = "<group>"; };
+		0BA15E1122F88E7000487037 /* PhotoGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewModel.swift; sourceTree = "<group>"; };
+		0BA15E1322F88EAB00487037 /* PhotoGalleryElementsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryElementsProvider.swift; sourceTree = "<group>"; };
+		0BA15E1522F88FDC00487037 /* PhotoGalleryElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryElement.swift; sourceTree = "<group>"; };
+		0BA15E1922F8907400487037 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		0BDD255522F788CF002B0346 /* Dynamic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
 		0BDD255722F78AAA002B0346 /* PhotoCaptureNamingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureNamingCell.swift; sourceTree = "<group>"; };
 		0BDD255922F79162002B0346 /* PhotoStorageWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoStorageWriter.swift; sourceTree = "<group>"; };
@@ -174,6 +186,12 @@
 		0B02174022F353EA00EB6D15 /* PhotoGallery */ = {
 			isa = PBXGroup;
 			children = (
+				0BA15E1922F8907400487037 /* Date.swift */,
+				0BA15E1522F88FDC00487037 /* PhotoGalleryElement.swift */,
+				0BA15E0F22F88E6700487037 /* PhotoGalleryElementCell.swift */,
+				0BA15E1322F88EAB00487037 /* PhotoGalleryElementsProvider.swift */,
+				0BA15E0D22F88E5300487037 /* PhotoGalleryTableViewController.swift */,
+				0BA15E1122F88E7000487037 /* PhotoGalleryViewModel.swift */,
 			);
 			path = PhotoGallery;
 			sourceTree = "<group>";
@@ -387,10 +405,13 @@
 			files = (
 				0BA15E0522F8784300487037 /* PhotoDirectoryProvider.swift in Sources */,
 				0B02174822F3547400EB6D15 /* StartMenuViewModel.swift in Sources */,
+				0BA15E1622F88FDC00487037 /* PhotoGalleryElement.swift in Sources */,
 				0B02175322F394A000EB6D15 /* PhotoCaptureViewModel.swift in Sources */,
+				0BA15E1022F88E6700487037 /* PhotoGalleryElementCell.swift in Sources */,
 				0B02174F22F35AA100EB6D15 /* StartMenuActionDelegate.swift in Sources */,
 				0BDD255A22F79162002B0346 /* PhotoStorageWriter.swift in Sources */,
 				0B02174D22F357E200EB6D15 /* StartMenuAction.swift in Sources */,
+				0BA15E0E22F88E5300487037 /* PhotoGalleryTableViewController.swift in Sources */,
 				0B02171222F3535200EB6D15 /* AppDelegate.swift in Sources */,
 				0B02174622F3546B00EB6D15 /* StartMenuTableViewController.swift in Sources */,
 				0B02175722F397C800EB6D15 /* PhotoCaptureProviderCallback.swift in Sources */,
@@ -399,7 +420,10 @@
 				0BA15E0322F8734800487037 /* BindingTextFIeld.swift in Sources */,
 				0BDD255622F788CF002B0346 /* Dynamic.swift in Sources */,
 				0B02175522F395F700EB6D15 /* PhotoCaptureUIProvider.swift in Sources */,
+				0BA15E1222F88E7000487037 /* PhotoGalleryViewModel.swift in Sources */,
 				0B02175122F3949300EB6D15 /* PhotoCaptureTableViewController.swift in Sources */,
+				0BA15E1A22F8907400487037 /* Date.swift in Sources */,
+				0BA15E1422F88EAB00487037 /* PhotoGalleryElementsProvider.swift in Sources */,
 				0B02175922F399F800EB6D15 /* Photo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
