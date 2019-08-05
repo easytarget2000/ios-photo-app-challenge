@@ -35,6 +35,14 @@ extension PhotoGalleryViewModel {
         cell.textLabel?.text = formatElementDescription(element: element)
     }
     
+    func handleSelection(
+        indexPath: IndexPath,
+        callback: ((PhotoGalleryElement) -> ())?
+    ) {
+        let element = elements.value![indexPath.row]
+        callback?(element)
+    }
+    
     func formatElementDescription(element: PhotoGalleryElement) -> String {
         let formattedDate = formatDate(element.creationDate)
         return String(
@@ -47,4 +55,5 @@ extension PhotoGalleryViewModel {
     func formatDate(_ date: Date) -> String {
         return date.description
     }
+    
 }

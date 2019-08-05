@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="788" y="65"/>
         </scene>
-        <!--Photo Gallery Table View Controller-->
+        <!--Gallery-->
         <scene sceneID="3Rn-G1-tb4">
             <objects>
-                <tableViewController id="HSj-i4-mUW" customClass="PhotoGalleryTableViewController" customModule="PhotoChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Gallery" id="HSj-i4-mUW" customClass="PhotoGalleryTableViewController" customModule="PhotoChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Gci-nX-3au">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,7 @@
                     </tableView>
                     <connections>
                         <outlet property="viewModel" destination="tM8-Sv-h1h" id="h3B-qF-7se"/>
-                        <segue destination="fAK-ec-nHb" kind="show" id="FJU-cc-6Zd"/>
+                        <segue destination="fAK-ec-nHb" kind="show" identifier="PhotoGalleryToElementDetailsSegue" id="FJU-cc-6Zd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LFi-fO-TRR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -109,20 +109,24 @@
             </objects>
             <point key="canvasLocation" x="1671" y="503"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo Gallery Element Details View Controller-->
         <scene sceneID="wKu-OT-rlP">
             <objects>
-                <viewController id="fAK-ec-nHb" sceneMemberID="viewController">
+                <viewController id="fAK-ec-nHb" customClass="PhotoGalleryElementDetailsViewController" customModule="PhotoChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QvE-wC-Ai9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Cyo-yL-vc0"/>
                     </view>
+                    <connections>
+                        <outlet property="viewModel" destination="bcW-ko-68z" id="0kn-bT-6Gc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8sB-yg-ANq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="bcW-ko-68z" customClass="PhotoGalleryElementDetailsViewModel" customModule="PhotoChallenge" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="2642" y="503"/>
+            <point key="canvasLocation" x="2510" y="503"/>
         </scene>
         <!--Take Photo-->
         <scene sceneID="mgE-ew-eFz">

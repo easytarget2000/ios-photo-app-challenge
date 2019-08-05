@@ -2,7 +2,7 @@ import UIKit
 
 class PhotoGalleryElementDetailsViewController: UIViewController {
     
-    weak var viewModel: PhotoGalleryViewModel!
+    @IBOutlet weak var viewModel: PhotoGalleryElementDetailsViewModel!
     
 }
 
@@ -12,7 +12,7 @@ extension PhotoGalleryElementDetailsViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupViewModel()
+        showPhoto()
     }
     
 }
@@ -21,7 +21,7 @@ extension PhotoGalleryElementDetailsViewController {
 
 extension PhotoGalleryElementDetailsViewController {
     
-    func setupViewModel() {
+    private func showPhoto() {
         
     }
 }
