@@ -59,6 +59,9 @@ extension PhotoCaptureViewModel {
     }
     
     func savePhoto() {
-        
+        guard let photo = photo, let photoName = photoName.value else {
+            return
+        }
+        storageWriter.savePhoto(photo, fileName: photoName)
     }
 }
