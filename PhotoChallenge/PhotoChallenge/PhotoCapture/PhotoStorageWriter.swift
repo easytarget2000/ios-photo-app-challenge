@@ -3,6 +3,8 @@ import CoreGraphics
 
 class PhotoStorageWriter: NSObject {
     
+    static let jpegFileExtension = "jpg"
+    private static let fullFileNameFormat = "%@.%@"
     @IBOutlet weak var directoryProvider: PhotoDirectoryProvider!
     var compressionQuality = 1.0
     var documentsDirectory: URL {
@@ -11,10 +13,19 @@ class PhotoStorageWriter: NSObject {
         }
     }
     
-    func savePhoto(_ photo: Photo, fileName: String) {
-        let jpegURLAndData = self.jpegURLAndData(photo, fileName: fileName)
-        let fileURL = jpegURLAndData.0
-        guard let photoData = jpegURLAndData.1 else {
+    func savePhoto(
+        _ photo: Photo,
+        name: String,
+        fileExtension: PhotoFileExtension = .jpeg
+    ) {
+        let urlAndData: (URL, Data?)
+        switch fileExtension {
+        case .jpeg:
+            urlAndData = jpegURLAndData(photo, name: name)
+        }
+        
+        let fileURL = urlAndData.0
+        guard let photoData = urlAndData.1 else {
             return
         }
         
@@ -28,12 +39,22 @@ class PhotoStorageWriter: NSObject {
         }
     }
     
-    func jpegURLAndData(_ photo: Photo, fileName: String) -> (URL, Data?) {
-        let fileName = "\(fileName).jpg"
-        let fileURL = documentsDirectory.appendingPathComponent(fileName)
+    func jpegURLAndData(_ photo: Photo, name: String) -> (URL, Data?) {
+        let fullFileName = PhotoStorageWriter.fullFileName(
+            name: name,
+            fileExtension: .jpeg
+        )
+        let fileURL = documentsDirectory.appendingPathComponent(fullFileName)
         
         let cgCompressionQuality = CGFloat(compressionQuality)
         let jpegData = photo.jpegData(compressionQuality: cgCompressionQuality)
         return (fileURL, jpegData)
+    }
+    
+    static func fullFileName(
+        name: String,
+        fileExtension: PhotoFileExtension
+    ) -> String {
+        return String(format: fullFileNameFormat, name, fileExtension.rawValue)
     }
 }
