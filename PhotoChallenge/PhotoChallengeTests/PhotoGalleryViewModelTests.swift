@@ -6,9 +6,6 @@ class PhotoGalleryViewModelTests: XCTestCase {
     var viewModel = PhotoGalleryViewModel()
     
     func testThat_NumberOfSectionsIsZeroWithoutElements() {
-        viewModel.elements.value = nil
-        XCTAssert(viewModel.numberOfSections == 0)
-        
         viewModel.elements.value = []
         XCTAssert(viewModel.numberOfSections == 0)
     }
