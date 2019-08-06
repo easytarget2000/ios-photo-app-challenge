@@ -5,6 +5,14 @@ class PhotoGalleryViewModelTests: XCTestCase {
     
     var viewModel = PhotoGalleryViewModel()
     
+    func testThat_NumberOfSectionsIsZeroWithoutElements() {
+        viewModel.elements.value = nil
+        XCTAssert(viewModel.numberOfSections == 0)
+        
+        viewModel.elements.value = []
+        XCTAssert(viewModel.numberOfSections == 0)
+    }
+    
     func testThat_ElementDescriptionsAreCorrect() {
         let elementDate = Date.init(timeIntervalSince1970: 0)
         let element = PhotoGalleryElement(
